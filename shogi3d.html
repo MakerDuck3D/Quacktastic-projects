@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Shogi 3D</title>
+<link rel="icon" type="image/png" href="images/favshogi.png">
+<style>
+@font-face {
+font-family: "Fun";
+src: url("fonts/SuperKindly.ttf") format("truetype");
+}
+@keyframes slideleft {
+0% { 
+opacity: 0;
+transform: translateX(-50%); }
+100% { 
+opacity: 1;
+transform: translateX(0%); }
+}
+@keyframes slideright {
+0% { 
+opacity: 0;
+transform: translateX(50%); }
+100% { 
+opacity: 1;
+transform: translateX(0%); }
+}
+@keyframes slidetop {
+0% { 
+opacity: 0;
+transform: translateY(-50%); }
+100% { 
+opacity: 1;
+transform: translateY(0%); }
+}
+@keyframes slidebottom {
+0% { 
+opacity: 0;
+transform: translateY(50%); }
+100% { 
+opacity: 1;
+transform: translateY(0%); }
+}
+@keyframes fade {
+0% { 
+opacity: 0;}
+100% { 
+opacity: 1;}
+}
+@keyframes color {
+0% { }
+100% { 
+background-color: yellow;}
+}
+@keyframes colorback {
+0% { 
+background-color: yellow;}
+100% { 
+background-color: orange;}
+}
+body {
+width: 100%;
+}
+.bg {
+position: fixed;
+z-index: -1;
+width: 100%;
+height: 100vh;
+background-image: url("images/shogi-bg.png");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+background-position: center;
+filter: blur(15px);
+animation: fade 2s ease-in-out 0s both;
+}
+p {
+font-family: Helvetica;
+opacity: 100%;
+color: black;
+}
+h2 {
+font-family: Fun;
+opacity: 100%;
+}
+b {
+font-family: Arial;
+}
+.grid {
+display: grid;
+margin: 10px 15px 10px 15px;
+grid-template-areas:
+"logo features"
+"about features"
+"download features"
+"remixing features"
+"community community"
+"bts bts"
+"footer footer";
+grid-template-columns: 1fr 300px;
+grid-template-rows: auto;
+gap: 5px;
+}
+.logo {
+animation: slidetop 0.5s ease-in-out 0s both;
+grid-area: logo;
+display: flex;
+justify-content: center;
+}
+.features {
+animation: slideright 0.5s ease-in-out 0.3s both;
+padding: 0px 10px 5px 10px;
+grid-area: features;
+display: flex;
+flex-direction: column;
+justify-content: start;
+align-items: center;
+text-align: center;
+margin-top: 15px;
+background-image: linear-gradient(to top right, rgba(102, 219, 255,0.6), rgba(192, 115, 255,0.6));
+border-radius: 10px;
+border: 2px solid black;
+}
+.about {
+animation: slideleft 0.5s ease-in-out 0.5s both;
+grid-area: about;
+padding: 0px 10px 5px 10px;
+background-image: linear-gradient(to top left, rgba(102, 219, 255,0.6), rgba(192, 115, 255,0.6));
+border-radius: 10px;
+border: 2px solid black;
+}
+.download {
+animation: slideleft 0.5s ease-in-out 0.7s both;
+grid-area: download;
+padding: 0px 10px 5px 10px;
+background-image: linear-gradient(to bottom left, rgba(102, 219, 255,0.6), rgba(192, 115, 255,0.6));
+border-radius: 10px;
+border: 2px solid black;
+}
+.remixing {
+animation: slideleft 0.5s ease-in-out 0.9s both;
+grid-area: remixing;
+padding: 0px 10px 5px 10px;
+background-image: linear-gradient(to top left, rgba(102, 219, 255,0.6), rgba(192, 115, 255,0.6));
+border-radius: 10px;
+border: 2px solid black;
+gap: 10px;
+}
+.community {
+animation: slidebottom 0.5s ease-in-out 1.1s both;
+grid-area: community;
+padding: 0px 10px 5px 10px;
+background-image: linear-gradient(to bottom left, rgba(102, 219, 255,0.6), rgba(192, 115, 255,0.6));
+border-radius: 10px;
+border: 2px solid black;
+}
+.bts {
+animation: fade 0.5s ease-in-out 1.4s both;
+grid-area: bts;
+display: flex;
+justify-content: space-around;
+}
+footer {
+grid-area: footer;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;color: black;
+}
+.feat {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+gap: 20px;
+}
+button {
+animation: colorback 0.3s ease-in-out 0s both;
+background-color: orange;
+font-family: Fun;
+font-size: 20px;
+border-radius: 10px;
+padding: 5px 5px 5px 5px;
+margin: 0px 5px 10px 0px;
+}
+button:hover {
+animation: color 0.3s ease-in-out 0s both;
+cursor: pointer;
+}
+#logo {
+width: 600px;
+}
+.gallery {
+width: 500px;
+}
+.ft {
+width: 150px;
+}
+.down {
+width: 60px;
+}
+</style>
+</head>
+<body>
+<div class = "bg"></div>
+<div class= "grid">
+<div class="logo"><img src="images/shogi-logo.png" id="logo"></div>
+<div class="features">
+<h2>FEATURES</h2>
+<div class="feat">
+<img src="images/shogi-king.png" class="ft">
+<b>DESIGN LOYAL TO BOTH CHESS AND SHOGI</b>
+<img src="images/shogi-color.png" class="ft">
+<b>EASY SWAP SYSTEM</b>
+<img src="images/shogi-lance.png" class="ft">
+<b>100% 3D PRINTED, NO SUPPORTS</b>
+<img src="images/shogi-var.png" class="ft" style="width: 200px;">
+<b>GAME VARIANTS</B>
+</div>
+</div>
+<div class="about">
+<h2>ABOUT</h2>
+<b>If you happen not to know what shogi is, read the <a href= "https://en.wikipedia.org/wiki/Shogi">Wikipedia<a> article first please.</b>
+<p>Have you ever tought that shogi deserve more than just flat wooden blocks?</p>
+<p>We did and decided to change that. After few weeks of designing, we are proud to show you our solution, Shogi 3D.</p>
+<p>You can make it at home right now and everything it will cost you is 170g of filament. And we'd say it's worth the experience.</p>
+<p>It isn't perfect by any means. The setup takes much longer and the color swaps take a bit more time too. But you can change that, if you want. Remixes are more than welcome.</p>
+<p>By default, you'll be able to play normal, Check, Dobutsu, Annan and Mini shogi with your set.</p>
+</div>
+<div class="download">
+<h2>DOWNLOAD</h2>
+<p>Choose a site of your liking to download the 3D files. Printables are recommended, because they allowed us to sort all the files for best clarity.</p>
+<a href="https://www.printables.com/model/1697720-shogi-3d"><img src="images/pt_icon.png" class="down"></a>
+<a href="https://www.thingiverse.com/thing:7339937"><img src="images/tv_icon.png" class="down"></a>
+<a href="https://makerworld.com/en/models/2698078-shogi-3d"><img src="images/mw_icon.png" class="down"></a>
+</div>
+<div class="remixing">
+<h2>REMIXING</h2>
+<p>We are thrilled to see your takes on this idea!</p>
+<p>Here you can download the .blend file for easier remixing. Choose the one that matches or is the closest to Blender version you are using.</p>
+<a href="downloads/shogi4.blend" download><button>SHOGI IN BLENDER 4.2</button></a>
+<a href="downloads/shogi5.blend" download><button>SHOGI IN BLENDER 5.1</button></a>
+<br>
+<b>Remix tips:</b>
+<ul>
+<li><p>New pieces design</p></li>
+<li><p>Magnets for quicker swaps</p></li>
+<li><p>Travel box and gameboard</p></li>
+<li><p>Chu shogi or solution for Kyoto shogi</p></li>
+</ul>
+</div>
+<div class="community">
+<h2>COMMUNITY</h2>
+<p>Here you'll find photos of prints or remixes of this project.</p>
+<p>Created by <a href="https://lishogi.org/@/Superkachna">Superkachna</a> and <a href="https://lishogi.org/@/puky">puky</a> with many thanks to <a href="https://lishogi.org/@/vuct1">vuct1</a> and <a href="https://lishogi.org/@/voprts">voprts</a> for help and reviews.
+<p>Would you like to have your photo here? Contact us: <a href="mailto:makerduck3d@seznam.cz">e-mail</a></p>
+</div>
+<div class="bts">
+<img src="images/shogi-board.png" class="gallery">
+<img src="images/shogi-pieces.png" class="gallery">
+</div>
+<footer>
+<a href="index.html"><button>CHECK OUT OTHER PROJECTS !</button></a>
+<p>Shogi 3D was made in 2026 and is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>DUCK Ecosystem</title>
+<link rel="icon" type="image/png" href="images/favduck.png">
+
+<style>
+body {
+height: 100%;
+background-image: linear-gradient(to bottom right, #99ff99, #ccffff);
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+@font-face {
+font-family: "Rounds Black";
+src: url("fonts/RoundsBlack.otf") format("opentype");
+}
+h1 {
+font-family: "Rounds Black", sans-serif;
+font-size: 300%;
+color: #ff6600;
+background-color: #000000;
+text-align: center;
+width: fit-content;
+height: 60px;
+padding-left: 25px;
+padding-right: 25px;
+margin: auto;
+border-radius: 30px;
+}
+p {
+font-family: "Arial";
+}
+.slogan {
+font-weight: 700;
+font-style: oblique;
+font-size: 150%;
+text-decoration: blink;
+}
+.layout {
+display: flex;
+gap: 20px;
+}
+.menu {
+width: 15%
+}
+button {
+width: 100%;
+height: 40px;
+margin-bottom: 10px;
+font-family: "Rounds Black", sans-serif;
+color: #ff6600;
+background-color: #000000;
+border-radius: 20px;
+cursor: pointer;
+}
+.content {
+flex:1;
+border: 5px solid #000000;
+border-radius: 10px;
+margin-right: 15%;
+padding: 5px 10px 10px 10px;
+background-color: #f2e6ff;
+}
+h3 {
+font-family: "Rounds Black";
+color: yellow;
+font-style: italic;
+font-size: 200%;
+-webkit-text-stroke: 2px black;
+}
+h2 {
+font-family: "Rounds Black";
+}
+img {
+width: 250px;
+float: right;
+margin: 10px 0px 0 10px;
+}
+a {
+font-family: "Arial"
+}
+footer {
+text-align: center;
+
+}
+#new {
+margin: 5px 10px 0 0;
+width: 400px;
+}
+</style>
+</head>
+
+<body>
+<div>
+<h1>DUCK</h1>
+<marquee><p class=slogan>Cheap and easy to build "smart home" ecosystem</p></marquee>
+</div>
+<div class=layout>
+<div class=menu>
+<a href="duck-home.html"><button>HOME</button></a> <br>
+<a href="duck.html"><button>DUCK</button></a> <br>
+<a href="gameduck.html"><button>GAMEDUCK</button></a> <br>
+<a href="duckbot.html"><button>DUCKBOT</button></a> <br>
+<a href="index.html"><button>Other projects</button></a> <br>
+<a href="creators.html"><button>About creators</button></a>
+</div>
+<div class=content>
+<img src="images/welcome.png">
+<h2>About the project</h2>
+<p>Main goal of the project DUCK is to make the user's life easier or at least bit more fun. </p>
+<p>It uses widespread microcontrollers (Arduino, ESP), some commmon hardware (cheap electronics + M3 screws), and 3D printed parts (optimized for no supports and fit on 180x180 bed). Files for these are on this website to download for free - along with firmware and source model files, allowing for easy customization and improvements. These might be needed, while we aren't professionals and are still learning. But every new release is going to be better, than the previous. So look forward to them and feel free to make yourself a copy of any of these projects.</p>
+<p>And have fun doing so!</p>
+
+<h2>Currently working on:</h2>
+<img src="images/new.png" id="new">
+<h3>GAMEDUCK</h3>
+<p>Open source Arduino based game console.</p>
+<p>➕ Very cheap to make and it has a joystick. </p>
+<p>➖ A bit limited by the screen and memory, but trust me, you'll still have a ton of quacktastic fun! </p><br>
+<a href="gameduck.html ">I'd like to know more</a>
+</div>
+</div>
+<footer>
+<p>Website created by MakerDuck3D in 2026. Project started in 2025. If you like it, please don't eat ducks.</p>
+<a href="contact.html">Contact</a>
+</footer>
+</body>
+</html>

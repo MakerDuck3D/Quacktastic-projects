@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Quacktastic projects | News</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<style>
+@font-face {
+font-family: "Fun";
+src: url("fonts/LuckiestGuy.ttf") format("truetype");
+}
+@keyframes slideleft {
+0% { 
+opacity: 0;
+transform: translateX(-100%); }
+80%{
+transform: translateX(5%);}
+100% { 
+opacity: 1;
+transform: translateX(0%); }
+}
+@keyframes slideright {
+0% { 
+opacity: 0;
+transform: translateX(100%); }
+80%{
+transform: translateX(-5%);}
+100% { 
+opacity: 1;
+transform: translateX(0%); }
+}
+@keyframes pop {
+0% { 
+opacity: 0;
+transform: scale(0.3)}
+100% { 
+opacity: 1;
+transform: scale(1)}
+}
+@keyframes sizeup {
+0% {transform: scale(1);}
+50% {
+transform: scale(1.1);}
+100% {
+box-shadow: 0 0 0 0 #0cedb1;
+transform: scale(1);}
+}
+@keyframes inleft {
+0% { 
+opacity: 0;
+transform: translateX(-100%); }
+100%{
+opacity: 1;
+transform: translateX(0%); }
+}
+@keyframes inright {
+0% { 
+opacity: 0;
+transform: translateX(100%); }
+100%{
+opacity: 1;
+transform: translateX(0%); }
+}
+body {
+height: 100%;
+background-image: linear-gradient(to top, #fc8c03, #2b0182, #23016b);
+background-repeat: no-repeat;
+background-attachment: fixed;
+cursor: url("images/cursor_auto.png"), auto; 
+}
+
+h1 {
+font-family: "Fun";
+letter-spacing: 2px;
+font-size: 100px;
+text-shadow: 0 0 30px #0cedb1;
+margin: -10px 20px -10px 20px;
+}
+h3 {
+font-family: "Fun";
+font-size: 70px;
+text-shadow: 0 0 30px yellow;
+margin: 10px 20px 10px 20px;
+}
+p, a, em {
+font-family: "Arial";
+text-decoration: none;
+}
+a {
+cursor: url("images/cursor_pointer.png"), pointer; 
+}
+.title {
+text-align: center;
+}
+.menu {
+display: flex;
+justify-content: center;
+gap: 10px;
+margin-top: 20px;
+}
+.button {
+font-family: Fun;
+font-size: 22px;
+background-image: linear-gradient(to top, #0cedb1, #3fb7fc);
+text-align: center;
+align-content: center;
+line-height: 1;
+color: black;
+width: 150px;
+height: 55px;
+background-color: #00cc55;
+border-radius: 20px;
+border: 3px solid black;
+cursor: url("images/cursor_pointer.png"), pointer; 
+}
+img:hover, .button:hover {
+animation: sizeup 0.5s ease-in-out;
+}
+.projects {
+display: flex;
+justify-content: center;
+margin-top: 20px;
+flex-direction: column;
+}
+.item1 {
+animation: inleft 1s ease-in-out 0.2s both;
+animation-iteration-count: 1;
+display: flex;
+justify-content: center;
+margin: 20px 0 0 0;
+}
+.item2 {
+animation: inright 1s ease-in-out 0.4s both;
+animation-iteration-count: 1;
+display: flex;
+justify-content: center;
+margin: 20px 0 0 0;
+}
+.item3 {
+animation: inleft 1s ease-in-out 0.6s both;
+animation-iteration-count: 1;
+display: flex;
+justify-content: center;
+margin: 20px 0 0 0;
+}
+.item4 {
+animation: pop 1s ease-in-out 0s both;
+animation-iteration-count: 1;
+display: flex;
+justify-content: center;
+margin: 10px 0 0 0;
+}
+img {
+height: 200px;
+border-radius: 30px;
+border: 5px black solid;
+cursor: url(images/cursor_pointer.png), pointer; 
+}
+.text {
+width: 600px;
+background-image: linear-gradient(to bottom right, yellow, orange);
+border-radius: 30px;
+border: 5px black solid;
+padding: 5px 10px 10px 20px;
+}
+h2 {
+font-family: Fun;
+letter-spacing: 1px;
+font-size: 25px;
+}
+footer {
+position: relative;
+text-align: center;
+margin-right: 20%;
+margin-left: 20%;
+}
+.lang {
+position: absolute;
+top: 15px;
+right: 15px;
+height: 50px;
+border-radius: 25px;
+}
+.stars1 {
+width: 8px;
+height: 8px;
+position: fixed;
+left: -8px;
+border-radius: 50%;
+background: yellow;
+box-shadow:
+250px  65px 4px yellow,
+50px 125px 4px #ffe86b,
+108px 235px 4px 3px yellow,
+120px 25px 5px 1px yellow,
+225px 170px 5px #ffe86b,
+35px 340px 4px 1px #ffe86b,
+200px 380px 4px 1px yellow,
+315px 265px 4px #ffe86b;
+}
+.stars2 {
+width: 8px;
+height: 8px;
+position: fixed;
+right: -8px;
+border-radius: 50%;
+background: yellow;
+box-shadow:
+-250px  65px 4px yellow,
+-50px 125px 4px #ffe86b,
+-108px 235px 4px 0px yellow,
+-120px 25px 5px 1px yellow,
+-225px 170px 5px 2px #ffe86b,
+-35px 340px 4px 3px #ffe86b,
+-200px 380px 4px 0px yellow,
+-315px 265px 4px #ffe86b;
+}
+</style>
+</head>
+<body>
+<div class="stars1"></div>
+<div class="stars2"></div>
+<div class="title">
+<h3>MAKERDUCK3D'S</h3>
+<h1 id="quack">QUACKTASTIC</h1>
+<h1 id="proj">PROJECTS</h1>
+</div>
+<div class="menu">
+<a href = "index.html"><div class="button">HOME</div></a>
+<a href = "aboutme.html"><div class="button">ABOUT ME</div></a>
+<a href = ""><div class="button">NEWS</div></a>
+<a href = "other.html"><div class="button">OTHER PROJECTS</div></a>
+</div>
+<div class="lang">
+<a href="news-cz.html"><img src="images/cz.png" style="height: 50px; border: 3px solid black;"></a>
+</div>
+<div class="projects">
+<div class="item1">
+<div class="text">
+<h2>SITE LAUNCHED!</h2>
+<em>25. 8. 2026</em>
+<p>After 3 months of work, I can pridefully inform you, that I have today launched beta version of this website. It runs for free via GitHub and it's prepared to serve you for free too.</p>
+<p>I hope that you'll have lots of fun with it, even if our interests don't quite match. But if you have ideas, how to improve this website, send an Issue, Pull request, or write an e-mail. I'm looking forward to your feedback!</p>
+<p>Some of the sites aren't fully ready yet, but I hope to have them finished till the end of the year. There's still a lot to look for.</p>
+<p>Enjoy browsing!</p>
+<em>MakerDuck3D</em>
+</div>
+</div>
+
+</div>
+<footer>
+<p>If you like the website, please don't eat ducks.</p>
+<a>© 2026 MakerDuck3D</a>  ●  <a href="contact.html">Contact</a>  ●  <a href="https://github.com/MakerDuck3D/Quacktastic-projects">GitHub</a>
+</footer>
+</body>
+</html>

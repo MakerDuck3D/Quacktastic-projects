@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JTF 3D models</title>
+<link rel="icon" type="image/png" href="images/favjtf.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
+.coiny-regular {
+  font-family: "Coiny", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+@keyframes rotate {
+0% {
+opacity: 0;
+width: 50px;
+transform: rotate(-360deg);
+}
+100% {
+opacity: 1;
+width: 350px;
+transform: rotate(0deg);
+}
+}
+@keyframes pop {
+0% {
+opacity: 0;
+transform: scale(0.5);
+}
+70% {
+transform: scale(1.1);
+}
+100% {
+opacity: 1;
+transform: scale(1);
+}
+}
+@keyframes fadein {
+0% { 
+opacity: 0;}
+100%{
+opacity: 1;}
+}
+@keyframes down {
+0% { 
+transform: translateY(-5%); }
+100% { 
+transform: translateY(0%); }
+}
+@keyframes up {
+0% { 
+transform: translateY(0%); }
+100% { 
+transform: translateY(-5%); }
+}
+@keyframes travel {
+0% { 
+left: 5px;
+top: -110px;}
+49% { 
+top: calc(100vw + 500px);
+left: 5px;}
+50% { 
+left: calc(100vw - 120px);
+top: calc(100vw + 500px);}
+99% { 
+left: calc(100vw - 120px);
+top: -110px;}
+100% { 
+left: 5px; 
+top: -110px; }
+}
+@keyframes shade1 {
+0% {
+box-shadow: inset 2px 2px 10px 0px white, inset -1px -2px 10px 0px black;
+}
+100% {
+box-shadow: inset -2px -2px 10px 0px white, inset 1px 2px 10px 0px black;
+}
+}
+@keyframes shade2 {
+0% {
+box-shadow: inset -2px -2px 10px 0px white, inset 1px 2px 10px 0px black;
+}
+100% {
+box-shadow: inset 2px 2px 10px 0px white, inset -1px -2px 10px 0px black;
+}
+}
+body {
+background-color: black;
+gap: 20px;
+}
+#logo {
+width: 350px;
+}
+.logo {
+animation: fadein 1s ease-in-out 1s both;
+display: flex;
+flex-direction: row;
+justify-content: center;
+gap: 20px;
+}
+h1 {
+animation: pop 0.5s ease-in-out 0.5s both;
+text-align: center;
+font-family: "Coiny";
+background: linear-gradient(to top, black, #ff4800, red);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-size: 50px;
+text-shadow: 0 0 30px orange;
+margin-top: -5px;
+}
+h2 {
+background: grey;
+box-shadow: inset 2px 2px 10px 0px white, inset -1px -2px 10px 0px black;
+width: 200px;
+text-align: center;
+font-family: "Coiny";
+border-radius: 6px;
+}
+em {
+border-radius: 2px;
+font-family: "Coiny";
+font-style: normal;
+display: inline-block;
+width: 60px;
+position: relative;
+bottom: 3px;
+right: 10px;
+transform: rotate(340deg);
+background-color: red;
+box-shadow: 2px 2px 5px 2px;
+}
+h3 {
+color: white;
+font-family: "Coiny";
+text-align: center;
+}
+p, a {
+font-family: "Coiny";
+font-size: 20px;
+margin: 5px 0 -4px 0;
+color: black;
+text-decoration: none;
+}
+.contents {
+display: flex;
+justify-content: center;
+flex-direction: row;
+align-content: center;
+}
+.icon {
+margin-top: 10px;
+width: 60px;
+}
+.redirect {
+animation: down 0.3s ease-in-out 0s both;
+background: grey;
+box-shadow: inset 2px 2px 10px 0px white, inset -1px -2px 10px 0px black;
+border-radius: 6px;
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 280px;
+cursor: pointer;
+}
+.apps {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.redirect:hover, #app:hover {
+animation: up 0.2s ease-in-out 0s both;
+}
+#app {
+animation: down 0.2s ease-in-out 0s both;
+}
+.example {
+width: 250px;
+border: 2px solid linear-gradient(to bottom left, black, #a3a3a3, #4a4a4a);
+border-radius: 6px;
+margin: 5px 15px 15px 15px;
+}
+.download {
+position: absolute;
+left: 10px;
+animation: travel 20s linear 3s infinite both;
+}
+#button {
+width: 510px;
+animation: shade2 0.3s ease-in-out 0s both;
+}
+#button:hover {
+animation: shade1 0.3s ease-in-out 0s both;
+}
+footer {
+position: relative;
+text-align: center;
+margin-right: 20%;
+margin-left: 20%;
+color: yellow;
+}
+</style>
+</head>
+<body>
+<a href="downloads/jtf-3d.stl" download><div class="download"><img src="images/jtf_download.png" style="width: 100px;"></div></a>
+<div class="contents">
+<img src="images/jtf_transparent.gif" id="logo" style="animation: rotate 0.7s ease-in-out both;">
+</div>
+<h1>3D MODELS</h1>
+<div class="logo">
+<h2><em>3D</em>PRINTING</h2>
+</div>
+<div class="logo"><h3>Choose your favorite site to download the models!</h3></div>
+<div class="logo">
+<a href="https://www.printables.com/@JTF_labs"><div class="redirect">
+<img src="images/pt_icon.png" class="icon">
+<img src="images/pt_ex.png" class="example">
+</div></a>
+<a href="https://www.thingiverse.com/JTF-labs/designs"><div class="redirect">
+<img src="images/tv_icon.png" class="icon">
+<img src="images/tv_ex.png" class="example">
+</div></a>
+<a href="https://makerworld.com/en/@superduck_3"><div class="redirect">
+<img src="images/mw_icon.png" class="icon">
+<img src="images/mw_ex.png" class="example">
+</div></a>
+</div>
+<div class="logo"><h3>Larger projects</h3></div>
+<div class="logo" style="margin-bottom: 10px;">
+<a href="shogi3d.html"><div class="redirect" style="width: 230px;">
+<p>Shogi 3D</p>
+<img src="images/logo_s3d.png" class="example" style="width: 200px;">
+</div></a>
+<a href="duck-home.html"><div class="redirect" style="width: 230px;">
+<p>System DUCK</p>
+<img src="images/logo_ecoduck.png" class="example" style="width: 200px;">
+</div></a>
+</div>
+<div class="logo">
+<h2 style="width: 225px;"><em>3D</em>ANIMATION</h2>
+</div>
+<div class="logo"><h3>Duck rigs coming soon!</h3></div>
+<div class="logo">
+<h2 style="width: 420px;">RECOMMENDED PROGRAMMES</h2>
+</div>
+<div class="logo">
+<div class="apps">
+<a href="https://www.freecad.org/"><img src="images/freecad_logo.png" class="icon" id="app"></a>
+<h3 style="margin: 1px 10px 0 10px;">FreeCAD</h3>
+</div>
+<div class="apps">
+<a href="https://www.blender.org/"><img src="images/blender_logo.png" class="icon" id="app"></a>
+<h3 style="margin: 1px 10px 0 10px;">Blender</h3>
+</div>
+</div>
+<div class="contents">
+<a href="index.html"><h2 id="button">CHECK OUT OTHER PROJECTS!</h2></a>
+</div>
+<footer>
+<h3>If you like the website, please don't eat ducks.</h3>
+<a style="color: orange; font-family: Arial; font-weight: bold;">© 2026 JTF</a>  ●  
+<a href="contact.html" style="color: orange;  font-family: Arial; font-weight: bold;">Contact</a>  ●  
+<a href="https://github.com/MakerDuck3D/Quacktastic-projects" style="color: orange;  font-family: Arial; font-weight: bold;">GitHub</a>
+</footer>
+</body>
+</html>

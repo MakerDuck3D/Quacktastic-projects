@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<title>Kvákovy projekty | O mě</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<style>
+@font-face {
+font-family: "Fun";
+src: url("fonts/LuckiestGuy.ttf") format("truetype");
+}
+@keyframes slideleft {
+0% { 
+opacity: 0;
+transform: translateX(-100%); }
+80%{
+transform: translateX(5%);}
+100% { 
+opacity: 1;
+transform: translateX(0%); }
+}
+@keyframes slideright {
+0% { 
+opacity: 0;
+transform: translateX(100%); }
+80%{
+transform: translateX(-5%);}
+100% { 
+opacity: 1;
+transform: translateX(0%); }
+}
+@keyframes pop {
+0% { 
+opacity: 0;
+transform: scale(0.3)}
+100% { 
+opacity: 1;
+transform: scale(1)}
+}
+@keyframes sizeup {
+0% {transform: scale(1);}
+50% {
+transform: scale(1.1);}
+100% {
+box-shadow: 0 0 0 0 #0cedb1;
+transform: scale(1);}
+}
+@keyframes inleft {
+0% { 
+opacity: 0;
+transform: translateX(-100%); }
+100%{
+opacity: 1;
+transform: translateX(0%); }
+}
+@keyframes inright {
+0% { 
+opacity: 0;
+transform: translateX(100%); }
+100%{
+opacity: 1;
+transform: translateX(0%); }
+}
+body {
+height: 100%;
+background-image: linear-gradient(to top, #fc8c03, #2b0182, #23016b);
+background-repeat: no-repeat;
+background-attachment: fixed;
+cursor: url("images/cursor_auto.png"), auto; 
+}
+h1 {
+font-family: "Fun";
+letter-spacing: 2px;
+font-size: 100px;
+text-shadow: 0 0 30px #0cedb1;
+margin: -10px 20px -10px 20px;
+}
+h3 {
+font-family: "Fun";
+font-size: 70px;
+text-shadow: 0 0 30px yellow;
+margin: 10px 20px 10px 20px;
+}
+p, a {
+font-family: "Arial";
+text-decoration: none;
+}
+.title {
+text-align: center;
+}
+.menu {
+display: flex;
+justify-content: center;
+gap: 10px;
+margin-top: 20px;
+}
+.button {
+font-family: Fun;
+font-size: 22px;
+background-image: linear-gradient(to top, #0cedb1, #3fb7fc);
+text-align: center;
+align-content: center;
+line-height: 1;
+color: black;
+width: 150px;
+height: 55px;
+background-color: #00cc55;
+border-radius: 20px;
+border: 3px solid black;
+cursor: url("images/cursor_pointer.png"), pointer; 
+}
+img:hover, .button:hover {
+animation: sizeup 0.5s ease-in-out;
+}
+.projects {
+display: flex;
+justify-content: center;
+margin-top: 20px;
+flex-direction: column;
+}
+.item1 {
+animation: inleft 1s ease-in-out 0.2s both;
+animation-iteration-count: 1;
+display: flex;
+justify-content: center;
+margin: 20px 0 0 0;
+}
+.item2 {
+animation: inright 1s ease-in-out 0.4s both;
+animation-iteration-count: 1;
+display: flex;
+justify-content: center;
+margin: 20px 0 0 0;
+}
+.item3 {
+animation: inleft 1s ease-in-out 0.6s both;
+animation-iteration-count: 1;
+display: flex;
+justify-content: center;
+margin: 20px 0 0 0;
+}
+.item4 {
+animation: pop 1s ease-in-out 0s both;
+animation-iteration-count: 1;
+display: flex;
+justify-content: center;
+margin: 10px 0 0 0;
+}
+img {
+height: 200px;
+border-radius: 30px;
+border: 5px black solid;
+cursor: url(images/cursor_pointer.png), pointer; 
+}
+.text {
+text-align: center;
+width: 600px;
+background-image: linear-gradient(to bottom right, yellow, orange);
+border-radius: 30px;
+border: 5px black solid;
+padding: 5px 10px 10px 20px;
+}
+h2 {
+font-family: Fun;
+letter-spacing: 1px;
+font-size: 25px;
+}
+footer {
+position: relative;
+text-align: center;
+margin-right: 20%;
+margin-left: 20%;
+}
+.lang {
+position: absolute;
+top: 15px;
+right: 15px;
+height: 50px;
+border-radius: 25px;
+}
+#photo {
+height: 300px;
+width: 300px;
+border-radius: 50%;
+border: 5px black solid;
+}
+.icon {
+height: 50px;
+border-radius: 0;
+border: 0;
+}
+.flock {
+height: 150px;
+border-radius: 0px;
+border: 0px;
+position: absolute;
+bottom: -20px;
+}
+.stars1 {
+width: 8px;
+height: 8px;
+position: fixed;
+left: -8px;
+border-radius: 50%;
+background: yellow;
+box-shadow:
+250px  65px 4px yellow,
+50px 125px 4px #ffe86b,
+108px 235px 4px 3px yellow,
+120px 25px 5px 1px yellow,
+225px 170px 5px #ffe86b,
+35px 340px 4px 1px #ffe86b,
+200px 380px 4px 1px yellow,
+315px 265px 4px #ffe86b;
+}
+.stars2 {
+width: 8px;
+height: 8px;
+position: fixed;
+right: -8px;
+border-radius: 50%;
+background: yellow;
+box-shadow:
+-250px  65px 4px yellow,
+-50px 125px 4px #ffe86b,
+-108px 235px 4px 0px yellow,
+-120px 25px 5px 1px yellow,
+-225px 170px 5px 2px #ffe86b,
+-35px 340px 4px 3px #ffe86b,
+-200px 380px 4px 0px yellow,
+-315px 265px 4px #ffe86b;
+}
+</style>
+</head>
+<body>
+<div class="stars1"></div>
+<div class="stars2"></div>
+<div class="title">
+<h3>KVÁKOVY</h3>
+<h1 id="quack">BÁJEČNÉ</h1>
+<h1 id="proj">PROJEKTY</h1>
+</div>
+<div class="menu">
+<a href = "index-cz.html"><div class="button">DOMŮ</div></a>
+<a href = ""><div class="button">O MĚ</div></a>
+<a href = "news-cz.html"><div class="button">NOVINKY</div></a>
+<a href = "other-cz.html"><div class="button">DALŠÍ <br> PROJEKTY</div></a>
+</div>
+<div class="lang">
+<a href="aboutme.html"><img src="images/en.png" style="height: 50px; border: 3px solid black;"></a>
+</div>
+<div class="projects">
+<div class="item4">
+<img id="photo" src="images/myphoto.png" onclick="document.getElementById('hi').play()">
+<audio id="hi" src="downloads/vitej.mp3"></audio>
+</div>
+<div class="item1">
+<div class="text">
+<h2>O MĚ</h2>
+<p>Kvahoj! Na internetu vystupuji pod mnoha jmény, ale mé skutečné je Toník.<br>
+Mám rád kachny a tvorbu rozličných projektů. Jsou to produkty mých různých zájmů - především 3D modelování a tisku, natáčení filmů a, (jak ostatně vidíte), tvorby webových stránek. <br>
+Taky mám rád věci zdarma, proto se mi líbí myšlenka open-source. Všechny zde uvedené projekty jsou zdarma a pokud chcete, můžete najít zdrojový kód k této stránce <a href="https://github.com/MakerDuck3D/Quacktastic-projects">zde</a>. <br>To by asi mělo ode mne být víceméně všechno, teď si užijte prohlížení těchto stránek!
+</p>
+</div>
+</div>
+<div class="item2">
+<div class="text">
+<h2>LINKTREE</h2>
+<p>Mrkněte na mé účty na různých stránkách:</p>
+<a href="https://youtube.com/@makerduck3d?si=nF-Wn0sDDUj5JQxg"><img class="icon" src="images/yt_icon.png"></a>
+<a href="https://github.com/MakerDuck3D"><img class="icon" src="images/gh_icon.png"></a>
+<a href="https://www.printables.com/@JTF_labs"><img class="icon" src="images/pt_icon.png"></a>
+</div>
+</div>
+<div class="item3">
+<div class="text">
+<h2>MÉ KAČENKY</h2>
+<p>Kvačík, Kachna Teta, Kachna Máma a Kachně. To jsou nejlepší kachny, které znám, bydlí u nás na zahradě a v patičce této stránky. 
+Klikněte na ně a poslechněte si je!</p>
+</div>
+</div>
+
+</div>
+<footer>
+<p>Pokud se vám stránky líbí, nejezte prosím kachny.</p>
+<a>© 2026 MakerDuck3D</a>  ●  <a href="contact.html">Kontakt</a>  ●  <a href="https://github.com/MakerDuck3D/Quacktastic-projects">GitHub</a>
+<br>
+<img class="flock" src="images/kachne.png" onclick="document.getElementById('kach').play()" style="left: -150px;">
+<img class="flock" src="images/kvacik.png" onclick="document.getElementById('kvac').play()" style="left: -250px;">
+<img class="flock" src="images/kachnateta.png" onclick="document.getElementById('teta').play()" style="right: -150px;">
+<img class="flock" src="images/kachnamama.png" onclick="document.getElementById('mama').play()" style="right: -250px;">
+<audio id="kach" src="downloads/kachne.mp3"></audio>
+<audio id="kvac" src="downloads/kvacik.mp3"></audio>
+<audio id="teta" src="downloads/kachnateta.mp3"></audio>
+<audio id="mama" src="downloads/kachnamama.mp3"></audio>
+
+</footer>
+</body>
+</html>

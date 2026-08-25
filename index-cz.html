@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<title>Kvákovy projekty</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<style>
+@font-face {
+font-family: "Fun";
+src: url("fonts/LuckiestGuy.ttf") format("truetype");
+}
+@keyframes slideleft {
+0% { 
+opacity: 0;
+transform: translateX(-100%); }
+80%{
+transform: translateX(5%);}
+100% { 
+opacity: 1;
+transform: translateX(0%); }
+}
+@keyframes slideright {
+0% { 
+opacity: 0;
+transform: translateX(100%); }
+80%{
+transform: translateX(-5%);}
+100% { 
+opacity: 1;
+transform: translateX(0%); }
+}
+@keyframes pop {
+0% { 
+opacity: 0;
+transform: scale(0.3)}
+100% { 
+opacity: 1;
+transform: scale(1)}
+}
+@keyframes unpop {
+0% { 
+opacity: 1;
+transform: scale(1)}
+100% { 
+opacity: 0;
+display: none;
+transform: scale(0.3)}
+}
+@keyframes sizeup {
+0% {transform: scale(1);}
+100% {
+transform: scale(1.1);}
+}
+@keyframes sizedown {
+0% {transform: scale(1.1);}
+100% {
+transform: scale(1);}
+}
+@keyframes inleft {
+0% { 
+opacity: 0;
+transform: translateX(-100%); }
+100%{
+opacity: 1;
+transform: translateX(0%); }
+}
+@keyframes inright {
+0% { 
+opacity: 0;
+transform: translateX(100%); }
+100%{
+opacity: 1;
+transform: translateX(0%); }
+}
+@keyframes fadein {
+0% { 
+opacity: 0;}
+100%{
+opacity: 1;}
+}
+body {
+height: 100%;
+background-image: linear-gradient(to top, #fc8c03, #2b0182, #23016b);
+background-repeat: no-repeat;
+background-attachment: fixed;
+cursor: url("images/cursor_auto.png"), auto; 
+}
+#quack {
+animation: slideleft 1.5s ease-in-out 0.3s both;
+animation-iteration-count: 1;
+}
+#proj {
+animation: slideright 1.5s ease-in-out 0.3s both;
+animation-iteration-count: 1;
+}
+h1 {
+font-family: "Fun";
+letter-spacing: 2px;
+font-size: 100px;
+text-shadow: 0 0 30px #0cedb1;
+margin: -10px 20px -10px 20px;
+}
+h3 {
+animation: pop 1s ease-in-out;
+font-family: "Fun";
+font-size: 70px;
+text-shadow: 0 0 30px yellow;
+margin: 10px 20px 10px 20px;
+}
+p, a {
+font-family: "Arial";
+text-decoration: none;
+}
+a {
+cursor: url("images/cursor_pointer.png"), pointer; 
+}
+.title {
+text-align: center;
+}
+.menu {
+display: flex;
+justify-content: center;
+gap: 10px;
+margin-top: 20px;
+animation: pop 1s ease-in-out 1s both;
+}
+.button {
+animation: sizedown 0.2s ease-in-out both;
+font-family: Fun;
+font-size: 22px;
+background-image: linear-gradient(to top, #0cedb1, #3fb7fc);
+text-align: center;
+align-content: center;
+line-height: 1;
+color: black;
+width: 150px;
+height: 55px;
+background-color: #00cc55;
+border-radius: 20px;
+border: 3px solid black;
+cursor: url("images/cursor_pointer.png"), pointer; 
+}
+img:hover, .button:hover {
+animation: sizeup 0.2s ease-in-out both;
+}
+.projects {
+display: flex;
+justify-content: center;
+margin-top: 20px;
+flex-direction: column;
+}
+.item1 {
+animation: inleft 1s ease-in-out 2s both;
+animation-iteration-count: 1;
+display: flex;
+justify-content: center;
+margin: 20px 0 0 0;
+}
+.item2 {
+animation: inright 1s ease-in-out 2.2s both;
+animation-iteration-count: 1;
+display: flex;
+justify-content: center;
+margin: 20px 0 0 0;
+}
+.item3 {
+animation: inleft 1s ease-in-out 2.4s both;
+animation-iteration-count: 1;
+display: flex;
+justify-content: center;
+margin: 20px 0 0 0;
+}
+.item4 {
+animation: inright 1s ease-in-out 2.6s both;
+animation-iteration-count: 1;
+display: flex;
+justify-content: center;
+margin: 20px 0 0 0;
+}
+img {
+animation: sizedown 0.2s ease-in-out both;
+height: 200px;
+border-radius: 30px;
+border: 5px black solid;
+cursor: url(images/cursor_pointer.png), pointer; 
+}
+.text {
+width: 400px;
+height: 180px;
+background-image: linear-gradient(to bottom right, yellow, orange);
+margin-left: 20px;
+border-radius: 30px;
+border: 5px black solid;
+padding: 5px 10px 10px 20px;
+}
+h2 {
+font-family: Fun;
+letter-spacing: 1px;
+font-size: 25px;
+}
+footer {
+text-align: center;
+margin-right: 20%;
+margin-left: 20%;
+}
+.lang {
+position: absolute;
+top: 15px;
+right: 15px;
+height: 50px;
+animation: pop 0.5s ease-in-out 3s both;
+animation-iteration-count: 1;
+border-radius: 25px;
+}
+.stars1 {
+animation: fadein 2s ease-in-out 0s both;
+width: 8px;
+height: 8px;
+position: fixed;
+left: -8px;
+border-radius: 50%;
+background: yellow;
+box-shadow:
+250px  65px 4px yellow,
+50px 125px 4px #ffe86b,
+108px 235px 4px 3px yellow,
+120px 25px 5px 1px yellow,
+225px 170px 5px #ffe86b,
+35px 340px 4px 1px #ffe86b,
+200px 380px 4px 1px yellow,
+315px 265px 4px #ffe86b;
+}
+.stars2 {
+animation: fadein 2s ease-in-out 0s both;
+width: 8px;
+height: 8px;
+position: fixed;
+right: -8px;
+border-radius: 50%;
+background: yellow;
+box-shadow:
+-250px  65px 4px yellow,
+-50px 125px 4px #ffe86b,
+-108px 235px 4px 0px yellow,
+-120px 25px 5px 1px yellow,
+-225px 170px 5px 2px #ffe86b,
+-35px 340px 4px 3px #ffe86b,
+-200px 380px 4px 0px yellow,
+-315px 265px 4px #ffe86b;
+}
+.important {
+animation: pop 0.8s ease-in-out 3.3s both;
+position: fixed;
+top: 20px;
+left: 15px;
+width: 200px;
+background-color: #e00f00;
+padding: 1px 10px 1px 10px;
+border-radius: 5px;
+border: 2px black solid;
+display: inline;
+box-shadow: 0px 2px 15px 0px black;
+}
+.close {
+float: right; 
+font-size: 30px;
+width: 25px;
+height: 25px; 
+margin: 3px -6px 0 0; 
+cursor: url(images/cursor_pointer.png), pointer;
+border-radius: 5px;
+border: 2px black solid;
+background-color: red;
+display: flex;
+text-align: center;
+justify-content: center;
+align-items: center;
+}
+</style>
+</head>
+<body>
+<div class="stars1"></div>
+<div class="stars2"></div>
+<div class="title">
+<h3>KVÁKOVY</h3>
+<h1 id="quack">BÁJEČNÉ</h1>
+<h1 id="proj">PROJEKTY</h1>
+</div>
+<div class="menu">
+<a href = ""><div class="button">DOMŮ</div></a>
+<a href = "aboutme-cz.html"><div class="button">O MĚ</div></a>
+<a href = "news-cz.html"><div class="button">NOVINKY</div></a>
+<a href = "other-cz.html"><div class="button">DALŠÍ <br> PROJEKTY</div></a>
+</div>
+<div class="lang">
+<a href="index.html"><img src="images/en.png" style="height: 50px; border: 3px solid black;"></a>
+</div>
+<div class="projects">
+
+<div class="important">
+<p class= "close" onclick="closeIt()">×</p>
+<p style= "text-align: center; margin: 5px 0px 5px 0px; font-size: 15px; font-weight: bold;">
+Toto je stále beta verze stránky a projde dalšími úpravami. Pokud narazíte na nějakou chybu, <a href="contact.html">napište mi</a> prosím. Díky!</p>
+</div>
+<div class="item1">
+<a onclick="alert('Ještě ve výstavbě. Promiň!')"><img src="images/logo_sd.png"></a>
+<div class="text">
+<h2>SUPERKACHNY</h2>
+<p>Malé nízkorozpočtové studio zaměřené na vytváření filmů o kachnách.</p>
+</div>
+</div>
+<div class="item2">
+<a href = "duck-home.html"><img src="images/logo_ecoduck.png"></a>
+<div class="text">
+<h2>EKOSYSTÉM DUCK</h2>
+<p>Projekt postavený na Arduinu s cílem vytvoření levného a snadno postavitelného ekosystému chytré domácnosti.</p>
+</div>
+</div>
+<div class="item3">
+<a onclick="alert('Ještě ve výstavbě. Promiň!')"><img src="images/md3d-profile.png"></a>
+<div class="text">
+<h2>KACHNY Z KVÁKAČKY</h2>
+<p>Stránka pro všechen lore o mimozemských kachnách, o kterých natáčíme filmy a píšeme literaturu.</p>
+</div>
+</div>
+<div class="item4">
+<a href = "3dmodels.html"><img src="images/logo_jtf.png"></a>
+<div class="text">
+<h2>3D MODELY</h2>
+<p>Koukněte se na mé modely. Ať pro 3D tisk, či animaci, všechny jsou zdarma ke stažení!</p>
+</div>
+</div>
+
+</div>
+<footer>
+<p>Pokud se vám stránky líbí, nejezte prosím kachny.</p>
+<a>© 2026 MakerDuck3D</a>  ●  <a href="contact.html">Kontakt</a>  ●  <a href="https://github.com/MakerDuck3D/Quacktastic-projects">GitHub</a>
+</footer>
+<script>
+function closeIt() {
+document.querySelector(".important").style.animation= "unpop 0.8s ease-in-out 0s both";
+}
+</script>
+</body>
+</html>
