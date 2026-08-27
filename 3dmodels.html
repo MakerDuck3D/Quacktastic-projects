@@ -86,6 +86,14 @@ box-shadow: inset -2px -2px 10px 0px white, inset 1px 2px 10px 0px black;
 box-shadow: inset 2px 2px 10px 0px white, inset -1px -2px 10px 0px black;
 }
 }
+@keyframes shine {
+0% { 
+color: black;}
+50% { 
+color: orange;}
+100% { 
+color: black;}
+}
 body {
 background-color: black;
 gap: 20px;
@@ -186,13 +194,16 @@ margin: 5px 15px 15px 15px;
 position: absolute;
 left: 10px;
 animation: travel 20s linear 3s infinite both;
+cursor: pointer;
 }
 #button {
 width: 510px;
-animation: shade2 0.3s ease-in-out 0s both;
+animation: shine 2s ease-in-out 0s infinite both,
+shade2 0.3s ease-in-out 0s both;
 }
 #button:hover {
-animation: shade1 0.3s ease-in-out 0s both;
+animation: shine 2s ease-in-out 0s infinite both,
+shade1 0.3s ease-in-out 0s both;
 }
 footer {
 position: relative;

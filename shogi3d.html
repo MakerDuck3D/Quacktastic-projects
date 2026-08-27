@@ -57,6 +57,14 @@ background-color: yellow;}
 100% { 
 background-color: orange;}
 }
+@keyframes shine {
+0% { 
+box-shadow: 0 0 10px 0px #c073ff;}
+50% { 
+box-shadow: 0 0 15px 10px #66dbff;}
+100% { 
+box-shadow: 0 0 10px 0px #c073ff;}
+}
 body {
 width: 100%;
 }
@@ -175,6 +183,15 @@ align-items: center;
 text-align: center;
 gap: 20px;
 }
+.glow {
+animation: shine 2s ease-in-out 1s infinite forwards,
+colorback 0.3s ease-in-out 0s both;
+}
+.glow:hover {
+animation: shine 2s ease-in-out 1s infinite forwards,
+color 0.3s ease-in-out 0s both;
+cursor: pointer;
+}
 button {
 animation: colorback 0.3s ease-in-out 0s both;
 background-color: orange;
@@ -216,7 +233,7 @@ width: 60px;
 <img src="images/shogi-lance.png" class="ft">
 <b>100% 3D PRINTED, NO SUPPORTS</b>
 <img src="images/shogi-var.png" class="ft" style="width: 200px;">
-<b>GAME VARIANTS</B>
+<b>GAME VARIANTS</b>
 </div>
 </div>
 <div class="about">
@@ -261,7 +278,7 @@ width: 60px;
 <img src="images/shogi-pieces.png" class="gallery">
 </div>
 <footer>
-<a href="index.html"><button>CHECK OUT OTHER PROJECTS !</button></a>
+<a href="index.html"><button class="glow">CHECK OUT OTHER PROJECTS !</button></a>
 <p>Shogi 3D was made in 2026 and is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
 </footer>
 </div>
