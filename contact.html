@@ -67,7 +67,7 @@ height: 100%;
 background-image: linear-gradient(to top, #fc8c03, #2b0182, #23016b);
 background-repeat: no-repeat;
 background-attachment: fixed;
-cursor: url("images/cursor_auto.png"), auto; 
+cursor: url("images/cursor_auto.png") 2 20, auto; 
 }
 
 h1 {
@@ -88,7 +88,7 @@ font-family: "Arial";
 text-decoration: none;
 }
 a {
-cursor: url("images/cursor_pointer.png"), pointer; 
+cursor: url("images/cursor_pointer.png") 2 20, pointer; 
 }
 .title {
 text-align: center;
@@ -113,7 +113,7 @@ height: 55px;
 background-color: #00cc55;
 border-radius: 20px;
 border: 3px solid black;
-cursor: url("images/cursor_pointer.png"), pointer; 
+cursor: url("images/cursor_pointer.png") 2 20, pointer; 
 }
 img:hover, .button:hover {
 animation: sizeup 0.2s ease-in-out both;
@@ -136,10 +136,10 @@ animation: sizedown 0.2s ease-in-out both;
 height: 200px;
 border-radius: 30px;
 border: 5px black solid;
-cursor: url(images/cursor_pointer.png), pointer; 
+cursor: url(images/cursor_pointer.png) 2 20, pointer; 
 }
 input, textarea {
-cursor: url(images/cursor_text.png), text; 
+cursor: url(images/cursor_text.png) 2 20, text; 
 }
 .text {
 width: 600px;
@@ -235,10 +235,10 @@ padding: 3px 3px 3px 5px;
 <br>
 <textarea type="text" name="feedback" rows="6" cols="49" placeholder="MESSAGE" class="contact"></textarea> <br>
 <p><input type="checkbox" name="agree" class="contact" required>I agree to the processing of my personal data.</p>
-<input type="hidden" name="_next" value="https://makerduck3d.github.io/Quacktastic-projects/thanks.html">
+<input type="hidden" name="_next" value="thanks.html">
 <input type="hidden" name="_subject" value="New message!">
 <input type="hidden" name="_autoresponse" value="Hi! This is the message you sent to us. Please wait patiently for our answer.">
-<input type="submit" value="SEND!" class="button">
+<input type="submit" value="SEND!" class="button"></form>
 </form>
 </div>
 </div>
