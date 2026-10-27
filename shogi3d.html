@@ -65,6 +65,18 @@ box-shadow: 0 0 15px 10px #66dbff;}
 100% { 
 box-shadow: 0 0 10px 0px #c073ff;}
 }
+@keyframes sizeup {
+0% { 
+transform: scale(100%);}
+100% { 
+transform: scale(110%);}}
+}
+@keyframes sizedown {
+0% { 
+transform: scale(110%);}
+100% { 
+transform: scale(100%);}}
+}
 body {
 width: 100%;
 }
@@ -194,10 +206,12 @@ cursor: pointer;
 }
 button {
 animation: colorback 0.3s ease-in-out 0s both;
+outline: none;
 background-color: orange;
 font-family: Fun;
 font-size: 20px;
 border-radius: 10px;
+border: 1.5px solid #e68b02;
 padding: 5px 5px 5px 5px;
 margin: 0px 5px 10px 0px;
 }
@@ -216,6 +230,11 @@ width: 150px;
 }
 .down {
 width: 60px;
+animation: sizedown 0.3s ease-in-out 0s both;
+}
+.down:hover {
+cursor: pointer;
+animation: sizeup 0.3s ease-in-out 0s both;
 }
 </style>
 </head>
@@ -259,7 +278,7 @@ width: 60px;
 <a href="downloads/shogi4.blend" download><button>SHOGI IN BLENDER 4.2</button></a>
 <a href="downloads/shogi5.blend" download><button>SHOGI IN BLENDER 5.1</button></a>
 <br>
-<b>Remix tips:</b>
+<b>Remix ideas:</b>
 <ul>
 <li><p>New pieces design</p></li>
 <li><p>Magnets for quicker swaps</p></li>
